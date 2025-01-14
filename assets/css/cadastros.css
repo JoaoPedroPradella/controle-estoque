@@ -1,0 +1,245 @@
+/* Variáveis */
+:root {
+  --cor0: #ffffff;
+  --cor1: rgb(138, 228, 255);
+  /* Hover linhas */
+  --cor2: #0c2b55;
+  /* Back */
+  --cor3: #4190ff;
+  /* Hover botões */
+  --cor4: #ddd;
+  /* Border */
+  --cor5: #000000;
+  /* Background */
+  --cor6: #ebf9ff;
+
+}
+
+body {
+  background-color: var(--cor6);
+}
+
+td {
+  padding: 3px;
+  border-bottom: 1px solid var(--cor4);
+
+}
+
+tr {
+  width: 100%;
+
+}
+
+tr:hover {
+  background-color: var(--cor1);
+}
+
+tr:nth-child(even) {
+  background-color: var(--cor0);
+}
+
+th {
+  border-collapse: collapse;
+  background-color: var(--cor2);
+  color: var(--cor0);
+  height: 40px;
+  border: 1px solid;
+  padding: 10px;
+  width: 75%;
+  border-radius: 8px;
+
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin-left: 10%;
+  empty-cells: hide;
+}
+
+table#tabelaItens {
+  border-collapse: collapse;
+  width: 100%;
+  margin-left: 0%;
+  empty-cells: hide;
+}
+
+#cabItens th {
+  padding: 8px;
+  font-size: 14px;
+  line-height: 1;
+}
+
+a:hover {
+  cursor: pointer;
+
+}
+
+dialog::backdrop {
+  background-color: rgb(0, 0, 0 / .8);
+}
+
+dialog {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 1px var(--cor5);
+  width: 900px;
+  height: 800px;
+  padding: 0px;
+}
+
+button#voltar {
+  margin-top: 10px;
+  height: 40px;
+  width: 80px;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+h1 {
+  margin-top: 10px;
+  width: 80%;
+}
+
+ul {
+  margin-right: 30px;
+}
+
+span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-large;
+}
+
+button#Novo {
+  margin-top: 30px;
+  margin-left: 35%;
+  width: 30%;
+
+}
+
+button#pag {
+  margin-top: 10px;
+  margin-left: 35%;
+  width: 30%;
+
+}
+
+/* ---------------- Tabela ---------------- */
+#codigo {
+  width: 200px;
+
+}
+
+#usuario {
+  width: 800px;
+}
+
+#email {
+  width: 800px;
+}
+
+#numero {
+  width: 150px;
+}
+
+#cliente {
+  width: 700px;
+}
+
+#valor {
+  width: 150px;
+}
+
+#pag {
+  width: 600px;
+}
+
+#data {
+  width: 200px;
+}
+
+/* ---------------- Venda ---------------- */
+
+table {
+  margin-bottom: 5px;
+}
+
+button#incluir {
+  margin-left: 10px;
+  margin-right: 75%;
+  height: 40px;
+  width: 100px;
+  font-size: 100%;
+  text-align: center;
+}
+
+input#txtqtd {
+  width: 150px;
+}
+
+input#txtprec {
+  width: 150px;
+}
+
+select#produtos {
+  width: 480px;
+}
+
+div#infItem {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+tr#item:hover {
+  background-color: var(--cor0);
+}
+
+div#itensLista {
+  max-height: 210px;
+  overflow-y: auto;
+  border: 1px solid var(--cor4);
+  padding: 10px;
+
+}
+
+button#concluir {
+  margin-top: 10px;
+}
+
+td.opcoes {
+  text-align: center;
+  /* Centraliza horizontalmente */
+  vertical-align: middle;
+  /* Centraliza verticalmente */
+
+}
+
+td.opcoes img {
+  display: inline-block;
+}
+
+.w-100 {
+  background-color: var(--cor2);
+  box-shadow: 0.5px 0px 0.5px rgba(0, 0, 0, 0.116);
+  border: var(--cor5);
+}
+
+.w-100:hover {
+  background-color: var(--cor3);
+}
+
+.mb-2 {
+  background-color: var(--cor2);
+  box-shadow: 0.5px 0px 0.5px rgba(0, 0, 0, 0.116);
+  border: var(--cor5);
+}
+
+.mb-2:hover {
+  background-color: var(--cor3);
+}
+
+#divTotal {
+  margin-top: 15px;
+  width: 100%;
+}

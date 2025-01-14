@@ -1,0 +1,62 @@
+create database ControleComissao
+go
+use ControleComissao
+go
+create table cliente(
+	id serial not null,
+	nome varchar(50) not null,
+	cpf varchar(11),
+	telefone varchar(15),
+	uf varchar(2),
+	municipio varchar(50),
+	cep varchar(15)
+);
+
+create table produto(
+	id serial not null,
+	descricao varchar(60) not null,
+	preco numeric(18,2),
+	quantidade numeric(9,2)
+);
+
+create table venda(
+	numvenda serial not null,
+	datahora TIMESTAMP,
+	valortotal numeric(18,2),
+	clienteid int not null,
+	pagamentoid int not null	
+);
+
+create table prod_venda(
+	id serial not null,
+	precounit numeric(18,2),
+	quantidade numeric(9,2),
+	produtoid int not null,
+	vendaid int not null
+);
+create table pagamento (
+	id serial not null,
+	descricao varchar(40) not null
+);
+
+-- primary keys
+alter table cliente add constraint pk_cliente primary key(id);
+alter table produto add constraint pk_produto primary key(id);
+alter table venda add constraint pk_venda primary key(id);
+alter table prod_venda add constraint pk_prod_venda primary key(id);
+alter table pagamento add constraint pk_pagamento primary key(id);
+
+-- foreign keys
+alter table venda add constraint fk_venda_cliente
+	foreign key (clienteid)
+		references cliente(id);
+alter table prod_venda add constraint fk_venda_prod_produto
+	foreign key (produtoid)
+		references produto(id);
+alter table prod_venda add constraint fk_venda_prod_venda
+	foreign key (vendaid)
+		references venda(numvenda);
+alter table venda add constraint fk_venda_pagamento
+	foreign key (pagamentoid) references pagamento(id);
+
+SET datestyle = 'DMY';

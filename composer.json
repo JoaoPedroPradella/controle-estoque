@@ -1,0 +1,10 @@
+{
+    "name": "administrador/controle-estoque",
+    "description": "Primeiro projeto de controle de estoque",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "require": {}
+}
